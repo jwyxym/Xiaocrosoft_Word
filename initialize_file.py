@@ -36,6 +36,7 @@ def initialize_json():
                 file.write(text)
 
 def initialize_list():
+    initialize_dir('setting')
     text = get_url('https://gh.llkk.cc/https://github.com/jwyxym/Xiaocrosoft_Word/blob/main/setting/voice_list.txt')
     with open('setting/voice_list.txt', 'w', encoding='utf-8') as file:
         file.write(text)

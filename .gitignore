@@ -1,3 +1,8 @@
 
 /__pycache__
 /audio
+/build
+/dist
+
+*.bat
+*.spec
