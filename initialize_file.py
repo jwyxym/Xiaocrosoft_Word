@@ -8,7 +8,8 @@ def get_setting():
         config = load(config_file)
         voice = config['voice']
         file = config['file']
-        return voice, file
+        chk = config['chk']
+        return voice, file, chk
 
 def initialize_voice(file):
     initialize_dir('setting')
@@ -29,7 +30,8 @@ def initialize_json():
             if text == '':
                 text = {
                     "voice": "zh-CN-XiaoxiaoNeural",
-                    "file": "audio/audio.mp3"
+                    "file": "audio/audio.mp3",
+                    "chk": 1
                 }
                 dump(text, file, ensure_ascii=False, indent=4)
             else:
