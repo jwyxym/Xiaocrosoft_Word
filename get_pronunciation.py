@@ -27,25 +27,6 @@ def is_polyphone(text, chk):
             t += char
     return t
 
-def get_char(b):
-        c = parse.quote(b)
-        url = f'https://ww.baidu.com/s?wd={c}'
-        html = get_html(url)
-        char = find_char(html, 'cos-col')
-        if char is not None:
-            return char
-        return b
-
-def find_char(html, element_class):
-    soup = BeautifulSoup(html, 'html.parser')
-    divs = soup.find_all(class_ = element_class)
-    for div in divs:
-        if '<span class="label-font_6cyLR">多</span>' in str(div):
-            continue
-        span = div.find('span')
-        return span.get_text()
-    return None
-
 def get_html(url):
     try:
         response = request.urlopen(url)
