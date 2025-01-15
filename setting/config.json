@@ -1,4 +1,5 @@
 {
     "voice": "zh-CN-XiaoxiaoNeural",
-    "file": "audio/audio.mp3"
+    "file": "audio/audio.mp3",
+    "chk": 1
 }
