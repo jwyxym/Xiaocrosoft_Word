@@ -1,5 +1,5 @@
 from change_voice import print_voice, change_voice
-from initialize_file import initialize_voice, initialize_list, get_setting
+from initialize_file import initialize_voice, initialize_list, initialize_json, get_setting
 
 def start_change(text):
     voice, file, chk = get_setting()
@@ -9,6 +9,7 @@ def start_change(text):
 
 if __name__ == '__main__':
     initialize_list()
+    initialize_json()
     while True:
         text = input("请输入要转换的文字：")
         start_change(text)
